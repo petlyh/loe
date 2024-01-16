@@ -4,6 +4,27 @@
 
 For most `lo` functions that takes a callback, `loe` has an equivalent that has been modified to return an error if one is returned by the callback function.
 
+## Installation
+
+```
+$ go get github.com/samber
+```
+
+## Usage
+
+`loe` functions are used in the same way as their corresponding `lo` functions, except that they have a different signature that includes an error.
+
+Example:
+
+```go
+newItems, err := loe.Map(
+    items,
+    func(item string, _ int) (string, error) {
+        return ErrableFunc(item, false)
+    },
+)
+```
+
 ## License
 
 `loe` has the same license as `lo`. It is reproduced below and in the [LICENSE.txt](LICENSE.txt) file.
