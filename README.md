@@ -7,7 +7,7 @@ For most `lo` functions that takes a callback, `loe` has an equivalent that has 
 ## Installation
 
 ```
-$ go get github.com/samber
+$ go get github.com/petlyh/loe
 ```
 
 ## Usage
